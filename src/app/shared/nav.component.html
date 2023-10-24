@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img [src]="logoUrl" alt="Logo" width="212" height="75">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item" *ngFor="let item of menuItems">
+          <a class="nav-link" href="#">{{item}}</a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <input class="form-control " [style.height]="'30px'" [style.width]="'400px'" type="search" placeholder="What do you want" aria-label="Search">
+        <span class="input-group-append">
+          <img src="/assets/img/icon-search.png" height="28"  class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5">
+        </span>
+        <button class="btn btn-dark margin-custom" [style.height]="'30px'" [style.width]="'115px'">
+          <img src="/assets/img/Person.svg" height="20"  width="20">
+          <span>Sign Up</span>
+        </button>
+        <img src="/assets/img/like.svg" height="30"  width="30" class="margin-custom">
+        <img src="/assets/img/cart.svg" height="30"  width="30" class="margin-custom">
+      </div>
+    </div>
+  </div>
+</nav>
+

@@ -1,0 +1,55 @@
+@import '../../../styles.scss';
+
+.navbar {
+  padding: 2%;
+  background-color: $color-gray-light;
+}
+
+.nav-item{
+  color: black; font-size: 15px;
+  font-family: Poppins;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin-left: 20px;
+}
+
+
+.ms-n5 {
+  margin-left: -40px;
+}
+
+
+.margin-custom {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-sing-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 4px;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .input-group-append {
+    position: relative;
+    left: -30px;
+    float: right;
+  }
+}
+
+.sing-up-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}

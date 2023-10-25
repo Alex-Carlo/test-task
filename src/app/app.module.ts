@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './shared/nav.component';
+import { PagesModule } from './pages/pages.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
   ],
   imports: [
     BrowserModule,
+    LayoutModule,
     AppRoutingModule
   ],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CART_SVG_URL, IMAGEN_SVG_URL, LIKE_SVG_URL, NAV_ITEMS } from "../constants/nav";
+import { CART_SVG_URL, IMAGEN_SVG_URL, LIKE_SVG_URL, NAV_ITEMS } from "../../constants/nav";
 
 @Component({
   selector: "app-nav",
@@ -8,7 +8,7 @@ import { CART_SVG_URL, IMAGEN_SVG_URL, LIKE_SVG_URL, NAV_ITEMS } from "../consta
 })
 
 export class NavComponent implements OnInit {
-  logoUrl= IMAGEN_SVG_URL;
+  logoUrl = IMAGEN_SVG_URL;
   menuItems = NAV_ITEMS;
   imagenUrl = LIKE_SVG_URL;
   cartUrl = CART_SVG_URL;

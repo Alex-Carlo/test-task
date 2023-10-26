@@ -1,3 +1,24 @@
 <section>
-    
+
+  <div class="parent">
+    <div class="card-orange"> <app-ads-card [type]="'orange'"></app-ads-card> </div>
+    <div class="card-white"> <app-ads-card [type]="'white'"></app-ads-card> </div>
+    <div class="div3"><div class="carosuel">
+      <div class="tex-carousel">
+          <p>“Psychedelics prove to you that there’s more than one way of seeing the world”</p>
+          <h6>Jesse Lawler</h6>
+      </div>
+        <img src="/assets/images/layout/rectangle10.png" />
+      </div>
+    </div>
+  </div>
+  <h1 class="title-categories">Top Categories</h1>
+  <div class="categories-section">
+    <div class="categories">
+      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+    </div>
+  </div>
 </section>

@@ -1,0 +1,23 @@
+@import '../../../../styles.scss';
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 571px;
+  height: 317px;
+  border-radius: 20px;
+  background-color: $color--white;
+  p {
+    width: 80%;
+    text-align: center;
+    color: $color--primary;
+  }
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+
+}

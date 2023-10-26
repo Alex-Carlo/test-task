@@ -1,21 +1,27 @@
 @import '../../../styles.scss';
 
 section {
-  background-image: url('/assets/images/layout/Background.svg');
-  background-color: $color--primary;
-  border-color: $color-gray-light !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 815px;
+  .parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-image: url('/assets/images/layout/background.png');  
+    background-color: $color--primary;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
 
+.categories-container {
+  position: relative;
+  bottom: 142px;
 }
-.parent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+
 
 .card-white {
   margin-top: 25rem;
@@ -30,7 +36,7 @@ section {
   position: absolute;
   top: 35px;
   left: 35px;
-  z-index: 1; /* Colocar encima de la imagen */
+  z-index: 1;
   width: 100%;
   max-width: 294px;
   max-height: 194px;
@@ -52,27 +58,17 @@ section {
 
 }
 
-
-@media (max-width: 996px) {
-  .parent {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card-orange, .card-white{
-    margin-top: 1rem;
-  }
-}
-
 .title-categories {
   text-align: center;
-  margin-top: 90px;
   color: $color--white;
   font-size: 40px;
   font-weight: 700;
   line-height: 60px;
+  position: relative;
+  z-index: 1;
 }
 
-.categories{
+.categories-cards{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -81,7 +77,11 @@ section {
   width: 90%;
   height: 563px;
   padding: 30px;
-
+  top: 32px;
+  position: relative;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
 }
 
 .categories-section {
@@ -112,5 +112,16 @@ section {
     font-size: 52px;
     line-height: 78px;
     letter-spacing: 0em;
+  }
+}
+
+
+@media (max-width: 996px) {
+  .parent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-orange, .card-white{
+    margin-top: 1rem;
   }
 }

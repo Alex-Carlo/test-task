@@ -1,0 +1,15 @@
+<div class="container-card" [ngClass]="type === 'orange' ? 'bg-gradiant': 'bg-white'">
+  <div class="logo-ads">
+    <img [src]="configType.img">
+  </div>
+  <div class="content" [ngClass]="type === 'orange' ? '': 'content-white'">
+    <h2 class="title">{{configType.title}}</h2>
+    <h2 class="title">{{configType.titleSecond}}</h2>
+    <h4 class="subtitle">{{configType.content}} <strong>{{isOrange ? '$99' : '$150'}}</strong></h4>
+    <div class="cupon-code">
+      <h4 *ngIf="isOrange">{{configType.footer}}</h4>
+      <h4 *ngIf="!isOrange"><strong>{{configType.footer}}</strong></h4>
+      <button class="btn  btn-warning custom-buttom" *ngIf="type === 'orange'"><span>FIRST20</span></button>
+    </div>
+  </div>
+</div>

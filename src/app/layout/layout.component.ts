@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   <app-nav></app-nav>
 </header>
   <main>
-      <section class="container-fluid">
+      <section >
           <router-outlet></router-outlet>
       </section>
   </main>

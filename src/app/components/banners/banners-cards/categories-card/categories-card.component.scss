@@ -1,0 +1,27 @@
+.container-card {
+  background: #FFDAC0;
+  width: 294px;
+  height: 461px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  img {
+    border-radius: 20px;
+  }
+  .name h2 {
+    margin-top: 10px;
+    text-align: center;
+    color: #F47820;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+
+
+  }
+}
+

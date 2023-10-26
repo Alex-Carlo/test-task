@@ -2,7 +2,7 @@
 
 .navbar {
   padding: 2%;
-  background-color: $color-gray-light;
+  background-color: $color-gray-light !important;
 }
 
 .nav-item{
@@ -52,4 +52,10 @@
   align-items: center;
   justify-content: center;
   width: 50%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+
 }

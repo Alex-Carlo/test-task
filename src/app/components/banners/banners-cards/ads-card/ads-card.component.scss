@@ -1,0 +1,95 @@
+@import '../../../../../styles.scss';
+.bg-gradiant {
+  background: linear-gradient(84.05deg, #F47820 -16.06%, rgba(251, 224, 205, 0.216743) 186.4%, rgba(253, 253, 253, 0) 293.18%);
+}
+.bg-white {
+  background-color: $color--white;;
+}
+.container-card {
+  width: 100%;
+  max-width: 415px;
+  max-height: 200px;
+  min-width: 415px;
+  min-height: 200px;
+  height: auto;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin-left: 20px;
+  position: relative;
+
+  .logo-ads img {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .cupon-code{
+    display: flex;
+    flex-direction: row;
+    h4{
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .custom-buttom{
+      width: 80px;
+      height: 30px;
+      border-color:  $color--primary;
+      border-radius: 5px;
+      background-color: $color--primary;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      margin-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span{
+        color: $color--white;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 120px;
+    .title {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 38px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .subtitle {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    h2, h4{
+      color: $color--white;
+    }
+  }
+}
+.content-white {
+  h2, h4 {
+    color: black !important;
+  }
+}
+@media (max-width: 768px) {
+  .container-card {
+    padding-top: 10%;
+    max-height: 300px;
+    max-width: 415px;
+    margin-left: 0;
+  }
+}

@@ -1,11 +1,12 @@
 @import '../../../styles.scss';
 
-section {
+
+
+:host section {
     background-image: url('/assets/images/layout/rectangle12.png');  
     background-size: 82% 83%, cover;
     background-repeat: no-repeat;
     background-position: bottom right;
-    height: 819px;
     p {
         max-width: 45%;
         font-size: 20px;

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   <app-nav></app-nav>
 </header>
   <main>
-      <section >
+      <section>
           <router-outlet></router-outlet>
       </section>
   </main>

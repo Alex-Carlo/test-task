@@ -1,8 +1,7 @@
 @import '../../../styles.scss';
 
-section {
-   margin-top: 120px;
-    height: 819px;
+:host section {
+
     .orders-container {
         display: flex;
         flex-direction: column;

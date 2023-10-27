@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 
-section {
+:host section {
+    margin-bottom: 80px;
     .subscribe-container {
         display: flex;
         justify-content: space-between;

@@ -1,11 +1,9 @@
 @import '../../../styles.scss';
 
-article {
-    margin-top: 80px;
+:host article {
     .highlights-container {
         background-color: $color-gray-light;
         width: 100%;
-        height: 613px;
         padding: 3%;
         border-radius: 30px;
         display: flex;

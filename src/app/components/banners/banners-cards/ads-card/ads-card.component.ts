@@ -1,5 +1,12 @@
 import { Component, Input, OnInit } from "@angular/core";
 
+interface CardData {
+  img: string;
+  title: string;
+  titleSecond: string;
+  content: string;
+  footer: string;
+}
 @Component({
   selector: "app-ads-card",
   templateUrl: "./ads-card.component.html",
@@ -10,9 +17,6 @@ export class AdsCardComponent implements OnInit {
   @Input() type = 'orange';
   isOrange = false;
   configType!: CardData;
-  constructor() {
-
-  }
 
   ngOnInit() {
     this.isOrange = this.type === 'orange';
@@ -24,12 +28,4 @@ export class AdsCardComponent implements OnInit {
       footer: this.isOrange ? 'Coupon Code' : 'Discreet, Undetectable'
     };
   }
-}
-
-interface CardData {
-  img: string;
-  title: string;
-  titleSecond: string;
-  content: string;
-  footer: string;
 }

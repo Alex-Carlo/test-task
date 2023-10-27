@@ -7,6 +7,7 @@ import { CategoriesCardComponent } from './banners/banners-cards/categories-card
 import { HighlightsComponent } from './highlights/highlights.component';
 import { ReviewCardComponent } from './highlights/review-card/review-card.component';
 import { OrdersComponent } from './orders/orders.component';
+import { SubscribeComponent } from './subscribe/subscribe.component';
 import { TopPerksComponent } from './top-perks/top-perks.component';
 
 
@@ -20,7 +21,8 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         HighlightsComponent,
         ReviewCardComponent,
         TopPerksComponent,
-        OrdersComponent
+        OrdersComponent,
+        SubscribeComponent
     ],
     imports: [
         CommonModule,
@@ -30,7 +32,8 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         AboutUsComponent,
         HighlightsComponent,
         TopPerksComponent,
-        OrdersComponent
+        OrdersComponent,
+        SubscribeComponent
     ],
     providers: [],
 })

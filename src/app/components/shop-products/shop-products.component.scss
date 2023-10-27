@@ -1,0 +1,18 @@
+section > app-card-product {
+  width: 100%;
+  height: auto;
+}
+
+.shop-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(426px, 1fr));
+  gap: 5px;
+}
+
+.title-shop-products{
+  margin-top: 46px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

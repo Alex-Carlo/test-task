@@ -8,6 +8,8 @@ import { HighlightsComponent } from './highlights/highlights.component';
 import { ReviewCardComponent } from './highlights/review-card/review-card.component';
 import { OrdersComponent } from './orders/orders.component';
 import { TopPerksComponent } from './top-perks/top-perks.component';
+import { ShopProductsComponent } from './shop-products/shop-products.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -20,17 +22,20 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         HighlightsComponent,
         ReviewCardComponent,
         TopPerksComponent,
-        OrdersComponent
+        OrdersComponent,
+        ShopProductsComponent
     ],
     imports: [
         CommonModule,
+        SharedModule
     ],
     exports: [
         BannerComponent,
         AboutUsComponent,
         HighlightsComponent,
         TopPerksComponent,
-        OrdersComponent
+        OrdersComponent,
+        ShopProductsComponent
     ],
     providers: [],
 })

@@ -10,6 +10,7 @@ import { ReviewCardComponent } from './highlights/review-card/review-card.compon
 import { OrdersComponent } from './orders/orders.component';
 import { ShopProductsComponent } from './shop-products/shop-products.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { PerkCardComponent } from './top-perks/perk-card/perk-card.component';
 import { TopPerksComponent } from './top-perks/top-perks.component';
 
 
@@ -22,6 +23,7 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         AboutUsComponent,
         HighlightsComponent,
         ReviewCardComponent,
+        PerkCardComponent,
         TopPerksComponent,
         OrdersComponent,
         SubscribeComponent,

@@ -1,12 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
+import { CardData } from "src/app/interfaces/card.interface";
 
-interface CardData {
-  img: string;
-  title: string;
-  titleSecond: string;
-  content: string;
-  footer: string;
-}
 @Component({
   selector: "app-ads-card",
   templateUrl: "./ads-card.component.html",

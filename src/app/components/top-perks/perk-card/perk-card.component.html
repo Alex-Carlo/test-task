@@ -1,0 +1,14 @@
+<div class="perk-card">
+  <div class="perk-card-icons">
+     <div class="perk-card-icons__flex">
+      <img src="/assets/images/icons/icon-cart.svg" alt="">
+      <img src="/assets/images/icons/icon-like.svg" alt="">
+     </div>
+  </div>
+  <img [src]="perk?.img" alt="">
+  <div class="perk-card-footer">
+      <p>{{ perk?.content }}</p>
+      <h3>{{ perk?.price | currency }}</h3>
+  </div>
+</div>
+

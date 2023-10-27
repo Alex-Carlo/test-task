@@ -1,8 +1,128 @@
 @import '../../../styles.scss';
 
 section {
-   
+   margin-top: 120px;
     height: 819px;
+    .orders-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        &__cards {
+            width: 100%;
+            display: flex;
+            justify-items: center;
+            gap: 5%;
+            .card:last-child{
+                justify-content: center;
+                background-color: $color--secondary;
+            }
+        
+            .card {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                height: 556px;
+                padding: 2%;
+                border-radius: 30px;
+                box-shadow: 0px 0px 23px 20px #00000008;
+                > P {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 30px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+               
+                .order-process {
+                    display: grid;
+                    grid-template: repeat(2, 200px) / repeat(2, 279px);
+                    gap: 4%;
+                     div {
+                        border-radius: 15px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        align-content: center;
+                        flex-wrap: wrap;
+                        p {
+                            font-size: 25px;
+                            font-weight: 600;
+                            line-height: 38px;
+                            letter-spacing: 0em;
+                        }
+                    }
+                    div > * {
+                        flex: 1 auto;
+                    }
+                    .step-2, .step-3{
+                        background-color: $color--primary;
+                        color: $color--white;
+                    }
+                    .step-1, .step-4{
+                        background-color: $color--secondary;
+                        color: $color--primary;
+                    }
+                    .step-1.circle::before{
+                        content: '1';
+                        background: $color--primary;
+                    }
+                    .step-2.circle::before{
+                        content: '2';
+                        background: $color--black;
+                    }
+                    .step-3.circle::before{
+                        content: '3';
+                        background: $color--black;
+                    }
+                    .step-4.circle::before{
+                        content: '4';
+                        background: $color--primary;
+                    }
+                }
+                .provinces {
+                    height: 354px;
+                    border-radius: 20px;
+                    background-color: $color--primary;
+                    background-image: url('/assets/images/layout/provinces.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                   
+                    h3 {
+                        color: $color--white;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        text-align: center;
+                        font-size: 62px;
+                        line-height: 93px;
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+    .circle::before {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        color: $color--white;
+        text-align: center;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 600;
+        position: relative;
+        right: 130px;
+        bottom: 13px;
+      }
  
 }
 

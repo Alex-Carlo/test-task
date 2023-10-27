@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { SharedModule } from '../shared/shared.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BannerComponent } from './banners/banner.component';
 import { AdsCardComponent } from './banners/banners-cards/ads-card/ads-card.component';
@@ -7,9 +8,9 @@ import { CategoriesCardComponent } from './banners/banners-cards/categories-card
 import { HighlightsComponent } from './highlights/highlights.component';
 import { ReviewCardComponent } from './highlights/review-card/review-card.component';
 import { OrdersComponent } from './orders/orders.component';
-import { TopPerksComponent } from './top-perks/top-perks.component';
 import { ShopProductsComponent } from './shop-products/shop-products.component';
-import { SharedModule } from '../shared/shared.module';
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { TopPerksComponent } from './top-perks/top-perks.component';
 
 
 
@@ -23,6 +24,7 @@ import { SharedModule } from '../shared/shared.module';
         ReviewCardComponent,
         TopPerksComponent,
         OrdersComponent,
+        SubscribeComponent,
         ShopProductsComponent
     ],
     imports: [
@@ -35,6 +37,7 @@ import { SharedModule } from '../shared/shared.module';
         HighlightsComponent,
         TopPerksComponent,
         OrdersComponent,
+        SubscribeComponent,
         ShopProductsComponent
     ],
     providers: [],

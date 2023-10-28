@@ -31,10 +31,7 @@
   <h1 class="title-categories">Top Categories</h1>
   <div class="categories-section">
     <div class="categories-cards">
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+      <app-categories-card *ngFor="let item of categories" [src]="item.img" [name]="item.name"/>
     </div>
   </div>
  </div>

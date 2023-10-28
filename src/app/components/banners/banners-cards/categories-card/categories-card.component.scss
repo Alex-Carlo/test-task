@@ -1,22 +1,24 @@
 .container-card {
   background: #FFDAC0;
-  width: 100%;
+  width: 290px;
   height: 461px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-right: 20px;
+  justify-content: space-evenly;
   img {
     border-radius: 20px;
+    width: 260px;
+    height: 321px;
   }
   .name h2 {
     margin-top: 10px;
     text-align: center;
     color: #F47820;
 
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;

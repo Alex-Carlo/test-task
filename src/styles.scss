@@ -1,22 +1,29 @@
 @import '../src/assets/css/variables';
 @import '../src/assets/css/reset';
 
-
-body {
-  font-family: Poppins, sans-serif;
-}
-
 * {
   font-family: Poppins, sans-serif;
 }
-.container {
-  margin-left: auto;
-  margin-right: auto;
+
+body, .form-control, .btn {
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
 }
+
+
 h3 {
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+p{
+  font-size: 2rem;;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }

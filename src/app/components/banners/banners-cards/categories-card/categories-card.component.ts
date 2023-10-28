@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from "@angular/core";
 export class CategoriesCardComponent implements OnInit {
   @Input() name = 'Dried Magic Mushrooms';
   @Input() src = '/assets/images/products/magic-mushrooms.png';
+
   constructor() {
 
   }
@@ -16,4 +17,5 @@ export class CategoriesCardComponent implements OnInit {
   ngOnInit() {
 
   }
+
 }

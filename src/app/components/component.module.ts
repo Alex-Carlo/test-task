@@ -12,6 +12,9 @@ import { ShopProductsComponent } from './shop-products/shop-products.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { PerkCardComponent } from './top-perks/perk-card/perk-card.component';
 import { TopPerksComponent } from './top-perks/top-perks.component';
+import { ExploreComponent } from './explore/explore.component';
+import { FqaSectionComponent } from './fqa-section/fqa-section.component';
+import { FqaPanelComponent } from './fqa-section/fqa-panel/fqa-panel.component';
 
 
 
@@ -27,7 +30,10 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         TopPerksComponent,
         OrdersComponent,
         SubscribeComponent,
-        ShopProductsComponent
+        ShopProductsComponent,
+        ExploreComponent,
+        FqaSectionComponent,
+        FqaPanelComponent
     ],
     imports: [
         CommonModule,
@@ -40,7 +46,10 @@ import { TopPerksComponent } from './top-perks/top-perks.component';
         TopPerksComponent,
         OrdersComponent,
         SubscribeComponent,
-        ShopProductsComponent
+        ShopProductsComponent,
+        ExploreComponent,
+        FqaSectionComponent,
+        FqaPanelComponent
     ],
     providers: [],
 })

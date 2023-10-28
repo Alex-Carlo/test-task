@@ -1,15 +1,15 @@
 
-  <div class="product-card" (mouseover)="showIcons = true" (mouseout)="showIcons = false">
-    <div class="icons" *ngIf="showIcons">
+  <div class="product-card" [ngClass]="isPerk ? 'product-orange': ''">
+    <div class="icons">
       <img src="/assets/images/icons/icon-like.svg" height="30"  width="30">
       <img src="/assets/images/icons/icon-cart.svg" height="30"  width="30">
     </div>
     <div class="zoomWrapper">
-      <img [src]="src" />
+      <img [src]="perk?.img" />
     </div>
     <div class="footer">
-      <p>{{name}}</p>
-      <p class="price">${{price}}</p>
+      <p>{{perk?.content}}</p>
+      <p class="price">${{perk?.price}}</p>
     </div>
   </div>
 

@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-right: 20px;
   img {
     border-radius: 20px;
@@ -20,8 +21,44 @@
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
-
-
   }
 }
 
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(244, 120, 32, 0.3), rgba(244, 120, 32, 0.85));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+.container-card:hover .content{
+  opacity: 1;
+  position: absolute;
+  height: 461px;
+  width: 285px;
+  border-radius: 30px;
+  visibility: inherit;
+}
+
+.container-card:hover .content *{
+  opacity: 1;
+}
+
+.shop{
+  position: absolute;
+  width: 200px;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  box-shadow: unset;
+  height: 50px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+}

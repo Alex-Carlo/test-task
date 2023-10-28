@@ -6,7 +6,7 @@ section > app-card-product {
 .shop-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(426px, 1fr));
-  gap: 5px;
+  gap: 1px;
 }
 
 .title-shop-products{

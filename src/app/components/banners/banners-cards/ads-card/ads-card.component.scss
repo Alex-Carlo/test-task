@@ -84,11 +84,21 @@
     color: black !important;
   }
 }
-@media (max-width: 768px) {
+
+
+
+
+@media screen and (max-width:575px) {
+
   .container-card {
-    padding-top: 10%;
-    max-height: 300px;
-    max-width: 415px;
-    margin-left: 0;
+      width: 90% !important;
   }
+  .container-card > .logo-ads {
+      display: none;
+  }
+  .container-card > .content.content-white, 
+  .container-card > .content {
+      margin-left: 3rem !important;
+  }
+  
 }

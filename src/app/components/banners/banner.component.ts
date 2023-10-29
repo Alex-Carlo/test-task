@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Observable, map, of } from "rxjs";
 
 @Component({
   selector: "app-banner",
@@ -25,4 +26,11 @@ export class BannerComponent {
       name: 'Microdosing Capsules'
     },
   ]
+  categories$: Observable<string[]> = of(this.categories).pipe(map((res) => res.map((item: any) => item.img)));
+
+  getItemName(image: string): string | undefined {
+    return this.categories.find(item => item.img === image)?.name;
+  }
 }
+
+

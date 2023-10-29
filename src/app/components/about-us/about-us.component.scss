@@ -47,10 +47,50 @@
     &__img{
         max-width: 500px;
         img {
-            width: 600;
-            height: 600;
+            width: 600px;
+            height: 600px;
             position: relative;
             bottom: 65px;
         }
     }
+}
+
+
+
+
+@media (max-width:1199px) and (min-width:992px) {
+section {
+    .about-us-content {
+        &__card {
+            h3 {
+                white-space: nowrap;
+                font-size: 3.5rem;
+            }
+        }
+        &__img {
+            img {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    }
+}
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+
+    
+}
+
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+
+@media screen and (max-width:575px) {
+
+
 }

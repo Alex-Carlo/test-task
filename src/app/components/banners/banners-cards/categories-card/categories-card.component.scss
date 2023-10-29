@@ -6,11 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
   justify-content: space-evenly;
   img {
     border-radius: 20px;
-    width: 260px;
+    width: 94%;
     height: 321px;
   }
   .name h2 {
@@ -27,3 +26,23 @@
   }
 }
 
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+
+    
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+@media screen and (max-width:575px) {
+
+
+}

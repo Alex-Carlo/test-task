@@ -1,0 +1,76 @@
+@import '../../../styles.scss';
+.container {
+
+  h1 {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    span{
+      color: $color--primary;
+      font-weight: 700;
+    }
+  }
+  img {
+    width: 281.08px;
+    height: 358.198px;
+    position: absolute;
+    right: 10px;
+
+  }
+  .explore-info {
+    width: 871px;
+    height: 352px;
+    border-radius: 70px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: linear-gradient(84deg, #FFDAC0 4.7%, rgba(255, 218, 192, 0.00) 110.33%, rgba(255, 218, 192, 0.38) 110.33%);
+  }
+  .explore-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    button{
+      cursor: pointer;
+      display: inline-flex;
+      padding: 13px 38px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: linear-gradient(81deg, rgba(244, 120, 32, 0.61) -63.95%, rgba(248, 167, 109, 0.40) 147.51%, rgba(255, 255, 255, 0.00) 230.95%);
+      backdrop-filter: blur(2px);
+      border: none;
+      color: $color--white;
+    }
+  }
+  .content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    h1{
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    p {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  .card-explore {
+    width: 418px;
+    height: 352px;
+    border-radius: 70px;
+    background: url(/assets/images/products/07.png), lightgray 50% / cover no-repeat;
+    text-align: center;
+    padding-top: 13px;
+  }
+}

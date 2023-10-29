@@ -1,9 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CardProductComponent } from './card-product/card-product.component';
+import { FilterBarComponent } from './filter/filter-bar.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav-bar/nav.component';
-import { CommonModule } from '@angular/common';
-import { FilterBarComponent } from './filter/filter-bar.component';
-import { CardProductComponent } from './card-product/card-product.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 
@@ -12,7 +13,8 @@ import { CardProductComponent } from './card-product/card-product.component';
         FooterComponent,
         NavComponent,
         FilterBarComponent,
-        CardProductComponent
+        CardProductComponent,
+        SliderComponent
     ],
     imports: [
         CommonModule,
@@ -21,7 +23,8 @@ import { CardProductComponent } from './card-product/card-product.component';
         FooterComponent,
         NavComponent,
         FilterBarComponent,
-        CardProductComponent
+        CardProductComponent,
+        SliderComponent
     ],
     providers: [],
 })

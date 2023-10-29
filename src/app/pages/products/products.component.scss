@@ -1,34 +1,10 @@
-
-.navbar {
-  background-color: #EEEEEE !important;
-}
-
-.nav-item{
-  color: black; font-size: 15px;
-  font-family: Poppins;
-  font-weight: 400;
-  text-transform: uppercase;
-  word-wrap: break-word;
-  margin-left: 20px;
-}
-
-
-.ms-n5 {
-  margin-left: -40px;
-}
-
-
-.margin-custom {
-  margin-left: 16px;
+@import '../../../styles.scss';
+.products-page {
   display: flex;
-  align-items: center;
-
+  flex-direction: column;
+  gap: 120px 0;
+  background-color: #eeeeee73;
 }
-
-.container {
-  margin-top: 30px;
-}
-
-.custom-append {
-  margin-left: -200px;
+.mg-buttom {
+  margin-bottom: 80px;
 }

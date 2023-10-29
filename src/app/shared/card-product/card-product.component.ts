@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from "@angular/core";
-
+import { CardData } from "src/app/interfaces/card.interface";
+interface Perk extends CardData {
+  price: number;
+}
 @Component({
   selector: "app-card-product",
   templateUrl: "./card-product.component.html",
@@ -7,10 +10,8 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 
 export class CardProductComponent implements OnInit {
-  @Input() name = 'Visionary Brew Magic Mushroom Tea';
-  @Input() price = '25';
-  @Input() src = '/assets/images/products/01.png';
-  showIcons = false;
+  @Input() perk: Perk | undefined;
+  @Input() isPerk = false;
   constructor() {
 
   }

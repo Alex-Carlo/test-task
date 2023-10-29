@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "app-categories-card",
@@ -6,14 +6,7 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./categories-card.component.scss"]
 })
 
-export class CategoriesCardComponent implements OnInit {
-  @Input() name = 'Dried Magic Mushrooms';
-  @Input() src = '/assets/images/products/magic-mushrooms.png';
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
+export class CategoriesCardComponent {
+  @Input() name: string | undefined;
+  @Input() src!: string;
 }

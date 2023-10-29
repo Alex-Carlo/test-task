@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="hot-banner__carousel">
-      <div class="carosuel">
+      <div class="carousel">
         <div class="tex-carousel">
             <p>“Psychedelics prove to you that there’s more than one way of seeing the world”</p>
             <h6>Jesse Lawler</h6>
@@ -31,10 +31,11 @@
   <h1 class="title-categories">Top Categories</h1>
   <div class="categories-section">
     <div class="categories-cards">
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
-      <app-categories-card [src]="'/assets/images/products/magic-mushrooms.png'" [name]="'Shrom Edibles'"/>
+       <app-slider [images]="categories$ | async">
+        <ng-template #customize let-img>
+          <app-categories-card class="categories-card" [src]="img" [name]="getItemName(img)"></app-categories-card>
+        </ng-template>
+       </app-slider>
     </div>
   </div>
  </div>

@@ -2,8 +2,8 @@
     <h3>Top Perks for you</h3>
     <div class="perks-carousel-container">
         <div class="perks-carousel-container__cards">
-           <app-perk-card *ngFor="let item of perks" [perk]="item"></app-perk-card>
-        </div>        
+          <app-card-product *ngFor="let item of perks" [isPerk]="true" [perk]="item"></app-card-product>
+        </div>
     </div>
     <div class="top-perk">
         <div class="top-perk__info">

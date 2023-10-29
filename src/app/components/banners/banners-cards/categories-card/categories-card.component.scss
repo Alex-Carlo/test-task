@@ -1,27 +1,84 @@
 .container-card {
   background: #FFDAC0;
-  width: 100%;
+  width: 290px;
   height: 461px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-right: 20px;
+  justify-content: space-evenly;
   img {
     border-radius: 20px;
+    width: 94%;
+    height: 321px;
   }
   .name h2 {
     margin-top: 10px;
     text-align: center;
     color: #F47820;
 
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
-
-
   }
 }
 
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(244, 120, 32, 0.3), rgba(244, 120, 32, 0.85));
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+.container-card:hover .content{
+  opacity: 1;
+  position: absolute;
+  height: 461px;
+  width: 285px;
+  border-radius: 30px;
+  visibility: inherit;
+}
+
+.container-card:hover .content *{
+  opacity: 1;
+}
+
+.shop{
+  position: absolute;
+  width: 200px;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  box-shadow: unset;
+  height: 50px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+
+    
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+@media screen and (max-width:575px) {
+
+
+}

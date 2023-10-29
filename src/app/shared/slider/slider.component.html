@@ -1,0 +1,17 @@
+<div #swiperContainer class="swiper-container">
+    <div class="swiper-wrapper">  
+        <div class="swiper-slide" *ngFor="let img of images">
+            <ng-container
+            *ngTemplateOutlet="
+              customize || defaultTemplate;
+              context: { $implicit: img }
+            "></ng-container>
+        </div>   
+    </div>
+    <div class="swiper-button-next next-btn"></div>
+    <div class="swiper-button-prev prev-btn"></div>
+</div>
+  <ng-template #defaultTemplate let-img>    
+        <img [src]="img" alt="Slider Image" />
+  </ng-template>
+  

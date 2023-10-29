@@ -1,23 +1,23 @@
 .container-card {
   background: #FFDAC0;
-  width: 100%;
+  width: 290px;
   height: 461px;
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  margin-right: 20px;
+  justify-content: space-evenly;
   img {
     border-radius: 20px;
+    width: 94%;
+    height: 321px;
   }
   .name h2 {
     margin-top: 10px;
     text-align: center;
     color: #F47820;
 
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
@@ -61,4 +61,24 @@
   background: transparent;
   cursor: pointer;
   border-radius: 15px;
+}
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+
+    
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+@media screen and (max-width:575px) {
+
+
 }

@@ -20,13 +20,15 @@
         height: 387px;
         justify-content: space-evenly;
         align-items: center;
-        border-radius: 30px;
+        border-radius: 3rem;
         background: linear-gradient(75.81deg, #000000 15.12%, rgba(244, 120, 32, 0) 271.94%);
         box-shadow: 0px 4px 4px 0px #00000008;
+        padding: 3rem;
 
         &__info {
             display: flex;
             flex-direction: column;
+            row-gap: 3rem;
             h3, p {
                 color: $color--white;
                 width: 60%;

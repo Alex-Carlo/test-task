@@ -2,9 +2,20 @@
     <section class="highlights-container">
         <h3>Some Awesome <br *ngIf="!(hasBreakLine$ | async)"> Review Highlights</h3>
         <div class="review-cards">
-            <app-slider [images]="reviews$ | async" [swiperConfig]="swiperConfig">
+            <app-slider class="slider-lh" [images]="reviews$ | async" [swiperConfig]="swiperConfig">
                 <ng-template #customize let-img>
-                    <app-review-card class="review-card" [avatar]="img" [content]="getItemContent(img)"></app-review-card>
+                    <app-review-card class="review-card" 
+                        [avatar]="img"
+                        [content]="getItem(img)?.content"
+                        [name]="getItem(img)?.name"></app-review-card>
+                </ng-template>
+               </app-slider>
+            <app-slider class="slider-rh" [images]="(reviews$ | async)?.reverse() ?? []" [swiperConfig]="swiperConfig">
+                <ng-template #customize let-img>
+                        <app-review-card class="review-card" 
+                            [avatar]="img"
+                            [content]="getItem(img)?.content"
+                            [name]="getItem(img)?.name"></app-review-card>
                 </ng-template>
                </app-slider>
         </div>

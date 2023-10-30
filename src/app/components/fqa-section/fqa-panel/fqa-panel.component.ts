@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-fqa-panel",
@@ -6,13 +6,4 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./fqa-panel.component.scss"]
 })
 
-export class FqaPanelComponent implements OnInit {
-
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
-}
+export class FqaPanelComponent { }

@@ -1,5 +1,6 @@
 
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
+import { PRODUCTS_STUB } from "src/app/services/stub-data/stub-data";
 
 @Component({
   selector: "app-shop-products",
@@ -7,45 +8,6 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./shop-products.component.scss"]
 })
 
-export class ShopProductsComponent implements OnInit {
-  products = [
-    {
-      price: 25,
-      content: 'Visionary Brew Magic Mushroom Tea',
-      img: '/assets/images/products/01.png'
-    },
-    {
-      price: 30,
-      content: 'Dry Mushrooms',
-      img: '/assets/images/products/04.png'
-    },
-    {
-      price: 18,
-      content: 'Pure Psilocybin',
-      img: '/assets/images/products/06.png'
-    },
-    {
-      price: 25,
-      content: 'Visionary Brew Magic Mushroom Tea',
-      img: '/assets/images/products/02.png'
-    },
-    {
-      price: 30,
-      content: 'Dry Mushrooms',
-      img: '/assets/images/products/05.png'
-    },
-    {
-      price: 18,
-      content: 'Pure Psilocybin',
-      img: '/assets/images/products/03.png'
-    },
-
-  ]
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
+export class ShopProductsComponent {
+  products = PRODUCTS_STUB;
 }

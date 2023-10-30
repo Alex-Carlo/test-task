@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Observable, combineLatest, map, of } from "rxjs";
 import { ResponsiveService } from "src/app/services/responsive.service";
+import { REVIEWS_STUB } from "src/app/services/stub-data/stub-data";
 import { SwiperOptions } from "swiper/types";
 
 @Component({
@@ -18,37 +19,27 @@ export class HighlightsComponent {
     map((res) => res.some((item: boolean) => item === true))
   );
 
-  reviews = [
-    {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      avatar: '/assets/images/layout/profile.png',
-    },
-    {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      avatar: '/assets/images/layout/profile.png',
-    },
-    {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      avatar: '/assets/images/layout/profile.png',
-    },
-    {
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-      avatar: '/assets/images/layout/profile.png',
-    },
-  ]
-
-  reviews$: Observable<string[]> = of(this.reviews).pipe(map((res) => res.map((item: any) => item.avatar)));
+  reviews$: Observable<string[]> = of(REVIEWS_STUB).pipe(map((res) => res.map((item: any) => item.avatar)));
 
   swiperConfig: SwiperOptions = {
-    slidesPerView: 2,
+    slidesPerView: 'auto',
     spaceBetween: 10,
     loop: true,
+    effect: "flip",
+    flipEffect: {
+      slideShadows: true,
+    },
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
   }
 
   constructor(private responsiveService: ResponsiveService) { }
 
-  getItemContent(avatar: string): string | undefined {
-    return this.reviews.find(item => item.avatar === avatar)?.content;
+  getItem(avatar: string) {
+    return REVIEWS_STUB.find(item => item.avatar === avatar);
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Observable, map, of } from "rxjs";
+import { PERKS_STUB } from "src/app/services/stub-data/stub-data";
 import { SwiperOptions } from "swiper/types";
 
 @Component({
@@ -9,40 +10,8 @@ import { SwiperOptions } from "swiper/types";
 })
 
 export class TopPerksComponent {
-  perks = [
-    {
-      price: 25,
-      content: 'Visionary Brew Magic Mushroom Tea',
-      img: '/assets/images/products/visionary-brew.png'
-    },
-    {
-      price: 30,
-      content: 'Dry Mushrooms',
-      img: '/assets/images/products/mushrooms-many.png'
-    },
-    {
-      price: 18,
-      content: 'Pure Psilocybin',
-      img: '/assets/images/products/pure-psilocybin.png'
-    },
-    {
-      price: 25,
-      content: 'Visionary Brew Magic Mushroom Tea',
-      img: '/assets/images/products/visionary-brew.png'
-    },
-    {
-      price: 30,
-      content: 'Dry Mushrooms',
-      img: '/assets/images/products/mushrooms-many.png'
-    },
-    {
-      price: 18,
-      content: 'Pure Psilocybin',
-      img: '/assets/images/products/pure-psilocybin.png'
-    },
 
-  ]
-  perks$: Observable<string[]> = of(this.perks).pipe(map((res) => res.map((item: any) => item.img)));
+  perks$: Observable<string[]> = of(PERKS_STUB).pipe(map((res) => res.map((item: any) => item.img)));
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 1,
@@ -61,6 +30,6 @@ export class TopPerksComponent {
   }
 
   getItem(img: string) {
-    return this.perks.find(item => item.img === img);
+    return PERKS_STUB.find(item => item.img === img);
   }
 }

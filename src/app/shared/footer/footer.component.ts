@@ -1,5 +1,4 @@
-import { Component, OnInit } from "@angular/core";
-import { CART_SVG_URL, IMAGEN_SVG_URL, LIKE_SVG_URL, NAV_ITEMS } from "../../constants/nav";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-footer",
@@ -7,6 +6,6 @@ import { CART_SVG_URL, IMAGEN_SVG_URL, LIKE_SVG_URL, NAV_ITEMS } from "../../con
   styleUrls: ["./footer.component.scss"]
 })
 
-export class FooterComponent  {
-  year = new Date().getFullYear(); 
+export class FooterComponent {
+  year = new Date().getFullYear();
 }

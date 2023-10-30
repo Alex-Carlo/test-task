@@ -12,11 +12,7 @@ register();
 export class SliderComponent implements AfterViewInit {
     @ContentChild('customize') customize!: TemplateRef<any>;
     @ViewChild('swiperContainer') swiperContainer: any;
-    @Input() images: string[] | null = [
-        '/assets/images/products/mushrooms.png',
-        '/assets/images/products/shrom-edibles.png',
-        '/assets/images/products/magic-mushrooms.png'
-    ];
+    @Input() images!: string[] | null;
     @Input() swiperConfig: SwiperOptions = {};
 
 

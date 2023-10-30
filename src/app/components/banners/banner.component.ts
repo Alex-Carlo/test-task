@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Observable, map, of } from "rxjs";
+import { CATAGORIES_STUB } from "src/app/services/stub-data/stub-data";
 import { SwiperOptions } from "swiper/types";
 
 @Component({
@@ -9,28 +10,11 @@ import { SwiperOptions } from "swiper/types";
 })
 
 export class BannerComponent {
-  categories = [
-    {
-      img: '/assets/images/products/mushrooms.png',
-      name: 'Dried Magic Mushrooms'
-    },
-    {
-      img: '/assets/images/products/shrom-edibles.png',
-      name: 'Shrom Edibles'
-    },
-    {
-      img: '/assets/images/products/magic-mushrooms.png',
-      name: 'Magic Musrooms Tea'
-    },
-    {
-      img: '/assets/images/products/microdosing-capsules.png',
-      name: 'Microdosing Capsules'
-    },
-  ]
-  categories$: Observable<string[]> = of(this.categories).pipe(map((res) => res.map((item: any) => item.img)));
+
+  categories$: Observable<string[]> = of(CATAGORIES_STUB).pipe(map((res) => res.map((item: any) => item.img)));
 
   getItemName(image: string): string | undefined {
-    return this.categories.find(item => item.img === image)?.name;
+    return CATAGORIES_STUB.find(item => item.img === image)?.name;
   }
 
   carouselConfig: SwiperOptions = {

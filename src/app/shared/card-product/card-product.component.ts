@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { CardData } from "src/app/interfaces/card.interface";
 interface Perk extends CardData {
   price: number;
@@ -9,15 +9,7 @@ interface Perk extends CardData {
   styleUrls: ["./card-product.component.scss"]
 })
 
-export class CardProductComponent implements OnInit {
+export class CardProductComponent {
   @Input() perk: Perk | undefined;
   @Input() isPerk = false;
-
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
 }

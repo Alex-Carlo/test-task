@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "app-explore",
@@ -6,13 +6,4 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./explore.component.scss"]
 })
 
-export class ExploreComponent implements OnInit {
-  
-  constructor() { 
-
-  }
-
-  ngOnInit() {
-
-  }
-}
+export class ExploreComponent { }

@@ -15,6 +15,7 @@
         align-items: center;
         gap: 26px;
         margin-top: 40px;
+        width: 49%;
         .review-card {
             display: contents;
             width: 100%;
@@ -24,6 +25,16 @@
         app-slider {
             width: 100%;
           }
+        ::ng-deep .slider-lh > .swiper-container {
+        .next-btn {
+                display: none !important;
+            }
+        }   
+        ::ng-deep .slider-rh > .swiper-container {
+        .prev-btn {
+                display: none !important;
+            }
+        }
         img {
             width: 30px;
             height: 30px;
@@ -32,3 +43,32 @@
 
    
 }
+
+
+@media screen and (max-width:767px) {
+    :host article {
+      
+        .review-cards{
+           flex-direction: column;
+            width: 100%;
+            .review-card {
+                display: contents;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+           
+            ::ng-deep .slider-lh > .swiper-container {
+            .next-btn {
+                    display: block !important;
+                }
+            }   
+            ::ng-deep .slider-rh > .swiper-container {
+            .prev-btn {
+                    display: block !important;
+                }
+            }
+          
+        }
+        }
+  }

@@ -9,4 +9,5 @@ import { Component, Input } from "@angular/core";
 export class ReviewCardComponent {
   @Input() avatar!: string | undefined;
   @Input() content!: string | undefined;
+  @Input() name!: string | undefined;
 }

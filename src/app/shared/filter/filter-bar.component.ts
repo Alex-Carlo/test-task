@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { FILTER_OPTIONS } from "src/app/constants/common.const";
 
 @Component({
   selector: "app-filter-bar",
@@ -6,13 +7,6 @@ import { Component, Input, OnInit } from "@angular/core";
   styleUrls: ["./filter-bar.component.scss"]
 })
 
-export class FilterBarComponent implements OnInit {
-  @Input() filters = ['All', 'Aphrodisiac', 'Cognitive', 'Energy', 'Immune Support', 'Pure Mushroom', 'Trip Stopper'];
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
+export class FilterBarComponent {
+  @Input() filters = FILTER_OPTIONS;
 }

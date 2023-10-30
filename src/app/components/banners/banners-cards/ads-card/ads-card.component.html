@@ -1,6 +1,6 @@
 <div class="container-card" [ngClass]="type === 'orange' ? 'bg-gradiant': 'bg-white'" role="region" [attr.aria-label]="configType.title">
   <div class="logo-ads">
-    <img [src]="configType.img" [alt]="configType.title + 'Logo'">
+    <img [src]="configType.image" [alt]="configType.title + 'Logo'">
   </div>
   <div class="content" [ngClass]="type === 'orange' ? '': 'content-white'">
     <h2 class="title">{{configType.title}}</h2>

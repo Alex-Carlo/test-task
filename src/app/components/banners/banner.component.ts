@@ -11,10 +11,10 @@ import { SwiperOptions } from "swiper/types";
 
 export class BannerComponent {
 
-  categories$: Observable<string[]> = of(CATAGORIES_STUB).pipe(map((res) => res.map((item: any) => item.img)));
+  categories$: Observable<string[]> = of(CATAGORIES_STUB).pipe(map((res) => res.map((item: any) => item.image)));
 
   getItemName(image: string): string | undefined {
-    return CATAGORIES_STUB.find(item => item.img === image)?.name;
+    return CATAGORIES_STUB.find(item => item.image === image)?.name;
   }
 
   carouselConfig: SwiperOptions = {

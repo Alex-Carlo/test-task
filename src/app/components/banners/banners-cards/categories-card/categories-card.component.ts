@@ -8,5 +8,5 @@ import { Component, Input } from "@angular/core";
 
 export class CategoriesCardComponent {
   @Input() name: string | undefined;
-  @Input() src!: string;
+  @Input() image!: string;
 }

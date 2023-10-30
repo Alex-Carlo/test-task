@@ -39,7 +39,7 @@
       <div class="categories-cards">
         <app-slider [images]="categories$ | async" [swiperConfig]="swiperConfig">
           <ng-template #customize let-img>
-            <app-categories-card class="categories-card" [src]="img" [name]="getItemName(img)" aria-label="Category Card">
+            <app-categories-card class="categories-card" [image]="img" [name]="getItemName(img)" aria-label="Category Card">
             </app-categories-card>
           </ng-template>
         </app-slider>

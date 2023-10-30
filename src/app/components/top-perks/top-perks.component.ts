@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Observable, map, of } from "rxjs";
-import { PERKS_STUB } from "src/app/services/stub-data/stub-data";
+import { PRODUCTS_STUB } from "src/app/services/stub-data/stub-data";
 import { SwiperOptions } from "swiper/types";
 
 @Component({
@@ -11,7 +11,8 @@ import { SwiperOptions } from "swiper/types";
 
 export class TopPerksComponent {
 
-  perks$: Observable<string[]> = of(PERKS_STUB).pipe(map((res) => res.map((item: any) => item.img)));
+  perks$: Observable<string[]> = of(PRODUCTS_STUB.filter((item => item.type === 'Perk')))
+    .pipe(map((res) => res.map((item: any) => item.image)));
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 1,
@@ -30,6 +31,6 @@ export class TopPerksComponent {
   }
 
   getItem(img: string) {
-    return PERKS_STUB.find(item => item.img === img);
+    return PRODUCTS_STUB.find(item => item.image === img);
   }
 }

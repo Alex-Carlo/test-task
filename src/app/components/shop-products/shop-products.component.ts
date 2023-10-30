@@ -9,5 +9,5 @@ import { PRODUCTS_STUB } from "src/app/services/stub-data/stub-data";
 })
 
 export class ShopProductsComponent {
-  products = PRODUCTS_STUB;
+  products = PRODUCTS_STUB.filter((item => !item.type));
 }

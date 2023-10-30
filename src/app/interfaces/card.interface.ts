@@ -1,5 +1,5 @@
 export interface CardData {
-    img?: string;
+    image?: string;
     title?: string;
     titleSecond?: string;
     content?: string;

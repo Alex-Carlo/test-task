@@ -15,7 +15,7 @@ export class AdsCardComponent implements OnInit {
   ngOnInit() {
     this.isOrange = this.type === 'orange';
     this.configType = {
-      img: this.isOrange ? '/assets/images/icons/icon-ads.svg' : '/assets/images/icons/icon-delivery-van.svg',
+      image: this.isOrange ? '/assets/images/icons/icon-ads.svg' : '/assets/images/icons/icon-delivery-van.svg',
       title: this.isOrange ? 'Get 20% Off' : 'Free Express',
       titleSecond: this.isOrange ? 'Your 1st Order' : 'Shipping',
       content: this.isOrange ? 'You get over' : 'Orders above',

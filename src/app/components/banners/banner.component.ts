@@ -32,6 +32,20 @@ export class BannerComponent {
   getItemName(image: string): string | undefined {
     return this.categories.find(item => item.img === image)?.name;
   }
+
+  carouselConfig: SwiperOptions = {
+    effect: "cards",
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  }
+
   swiperConfig: SwiperOptions = {
     slidesPerView: 1,
     spaceBetween: 10,

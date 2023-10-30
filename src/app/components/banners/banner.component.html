@@ -18,12 +18,16 @@
       </div>
     </div>
     <div class="hot-banner__carousel">
-      <div class="carousel">
-        <div class="tex-carousel">
-            <p>“Psychedelics prove to you that there’s more than one way of seeing the world”</p>
-            <h6>Jesse Lawler</h6>
-        </div>
-        </div>
+        <app-slider [swiperConfig]="carouselConfig">
+          <ng-template #customize>
+            <div class="carousel">
+              <div class="tex-carousel">
+                  <p>“Psychedelics prove to you that there’s more than one way of seeing the world”</p>
+                  <h6>Jesse Lawler</h6>
+              </div>
+              </div>
+          </ng-template>
+        </app-slider>
     </div>
   </div>
 

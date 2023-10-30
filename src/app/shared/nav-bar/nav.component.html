@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" >
-      <img [src]="logoUrl" alt="Logo" width="212" height="75">
+    <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active">
+      <img [src]="logoUrl" alt="Canalife" width="212" height="75" aria-label="Logo canalife">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,26 +9,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto text-center m-4">
         <li class="nav-item" *ngFor="let item of menuItems">
-          <a class="nav-link" routerLink="products">{{item}}</a>
+          <a class="nav-link" routerLink="products" [attr.aria-label]="item">{{item}}</a>
         </li>
       </ul>
       <div class="search-sing-menu">
-       <div class="form-group">
-        <input class="form-control"type="search" placeholder="What do you want" aria-label="Search">
-        <span class="input-group-append">
-          <img src="/assets/images/icons/icon-search.png">
-        </span>
-       </div>
-       <div class="d-flex w-100 justify-content-evenly">
-        <button class="btn btn-dark sing-up-btn">
-          <img src="/assets/images/icons/icon-person.svg" height="20"  width="20">
-          <span>Sign Up</span>
-        </button>
-        <img src="/assets/images/icons/icon-like.svg" height="30"  width="30">
-        <img src="/assets/images/icons/icon-cart.svg" height="30"  width="30">
-       </div>
+        <div class="form-group">
+          <input class="form-control" type="search" placeholder="What do you want" aria-label="Search for products">
+          <span class="input-group-append">
+            <img src="/assets/images/icons/icon-search.png" alt="Search icon" aria-label="Search Icon">
+          </span>
+        </div>
+        <div class="d-flex w-100 justify-content-evenly">
+          <button class="btn btn-dark sing-up-btn" aria-label="Sign Up">
+            <img src="/assets/images/icons/icon-person.svg" height="20" width="20" alt="User Icon" aria-label="User Icon">
+            <span>Sign Up</span>
+          </button>
+          <img src="/assets/images/icons/icon-like.svg" height="30" width="30" alt="Favorite Icon" aria-label="Favorite Icon">
+          <img src="/assets/images/icons/icon-cart.svg" height="30" width="30" alt="Shopping Cart Icon" aria-label="Shopping Cart Icon">
+        </div>
       </div>
     </div>
   </div>
 </nav>
-

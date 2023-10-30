@@ -1,6 +1,6 @@
 <nav class="filter-bar">
   <div class="filter" *ngFor="let item of filters">
-    <img src="/assets/images/icons/icon-filter.svg" alt="">
+    <img src="/assets/images/icons/icon-filter.svg" [alt]="item" role="img" [attr.aria-label]="item">
     <p>{{item}}</p>
   </div>
 </nav>

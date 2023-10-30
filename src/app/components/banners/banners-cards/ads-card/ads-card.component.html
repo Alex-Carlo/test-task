@@ -1,6 +1,6 @@
-<div class="container-card" [ngClass]="type === 'orange' ? 'bg-gradiant': 'bg-white'">
+<div class="container-card" [ngClass]="type === 'orange' ? 'bg-gradiant': 'bg-white'" role="region" [attr.aria-label]="configType.title">
   <div class="logo-ads">
-    <img [src]="configType.img">
+    <img [src]="configType.img" [alt]="configType.title + 'Logo'">
   </div>
   <div class="content" [ngClass]="type === 'orange' ? '': 'content-white'">
     <h2 class="title">{{configType.title}}</h2>
@@ -9,7 +9,7 @@
     <div class="cupon-code">
       <h4 *ngIf="isOrange">{{configType.footer}}</h4>
       <h4 *ngIf="!isOrange"><strong>{{configType.footer}}</strong></h4>
-      <button class="btn  btn-warning custom-buttom" *ngIf="type === 'orange'"><span>FIRST20</span></button>
+      <button class="btn  btn-warning custom-buttom" *ngIf="type === 'orange'" aria-label="Apply Coupon"><span>FIRST20</span></button>
     </div>
   </div>
 </div>

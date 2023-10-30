@@ -1,15 +1,13 @@
-
-  <div class="product-card" [ngClass]="isPerk ? 'product-orange': ''">
-    <div class="icons">
-      <img src="/assets/images/icons/icon-like.svg" height="30"  width="30">
-      <img src="/assets/images/icons/icon-cart.svg" height="30"  width="30">
-    </div>
-    <div class="zoomWrapper">
-      <img [src]="perk?.img" />
-    </div>
-    <div class="footer">
-      <p>{{perk?.content}}</p>
-      <p class="price">${{perk?.price}}</p>
-    </div>
+<div class="product-card" [ngClass]="isPerk ? 'product-orange' : ''" role="listitem" [attr.aria-label]="perk?.content">
+  <div class="icons">
+    <img src="/assets/images/icons/icon-like.svg" height="30" width="30" alt="Like icon">
+    <img src="/assets/images/icons/icon-cart.svg" height="30" width="30" alt="Cart icon">
   </div>
-
+  <div class="zoomWrapper">
+    <img [src]="perk?.img" alt="{{perk?.content}} image">
+  </div>
+  <div class="footer">
+    <p>{{perk?.content}}</p>
+    <p class="price">${{perk?.price}}</p>
+  </div>
+</div>

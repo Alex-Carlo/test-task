@@ -1,7 +1,7 @@
 
 <section class="container">
   <h1 class="title-shop-products">What are you looking for?</h1>
-  <section class="shop-products" >
+  <section class="shop-products" role="list" aria-label="List of products">
     <app-card-product *ngFor="let item of products" [isPerk]="false" [perk]="item"></app-card-product>
   </section>
 </section>

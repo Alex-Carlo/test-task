@@ -1,18 +1,17 @@
-<div #swiperContainer class="swiper-container">
-    <div class="swiper-wrapper">  
+<div #swiperContainer class="swiper-container" role="region" aria-label="Image Slider">
+    <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let img of images">
             <ng-container
             *ngTemplateOutlet="
               customize || defaultTemplate;
               context: { $implicit: img }
             "></ng-container>
-        </div>   
+        </div>
     </div>
-    <div class="swiper-button-next next-btn"></div>
-    <div class="swiper-button-prev prev-btn"></div>
-    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next next-btn" aria-label="Button next"></div>
+    <div class="swiper-button-prev prev-btn" aria-label="Button preview"></div>
+    <div class="swiper-pagination" role="status" aria-label="Pagination"></div>
 </div>
-  <ng-template #defaultTemplate let-img>    
+  <ng-template #defaultTemplate let-img>
         <img [src]="img" alt="Slider Image" />
   </ng-template>
-  

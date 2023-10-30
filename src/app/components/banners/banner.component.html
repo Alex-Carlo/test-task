@@ -4,43 +4,46 @@
       <div class="text-banner">
         <h2 class="text-banner__canada">Canada’s</h2>
         <h2 class="text-banner__best">Best Spot to</h2>
-        <h2 class="text-banner__buy">Buy <span>Shroms</span>  Online!</h2>
+        <h2 class="text-banner__buy">Buy <span>Shroms</span> Online!</h2>
       </div>
     </div>
     <div class="hot-banner__discount">
-      <div class="card-orange"> 
-        <app-ads-card [type]="'orange'"></app-ads-card> 
+      <div class="card-orange" aria-label="Orange Card">
+        <app-ads-card [type]="'orange'"></app-ads-card>
       </div>
     </div>
     <div class="hot-banner__shipping">
-      <div class="card-white"> 
-        <app-ads-card [type]="'white'"></app-ads-card> 
+      <div class="card-white" aria-label="White Card">
+        <app-ads-card [type]="'white'"></app-ads-card>
       </div>
     </div>
     <div class="hot-banner__carousel">
-        <app-slider [swiperConfig]="carouselConfig">
-          <ng-template #customize>
-            <div class="carousel">
-              <div class="tex-carousel">
-                  <p>“Psychedelics prove to you that there’s more than one way of seeing the world”</p>
-                  <h6>Jesse Lawler</h6>
-              </div>
-              </div>
-          </ng-template>
-        </app-slider>
+      <app-slider [swiperConfig]="carouselConfig">
+        <ng-template #customize>
+          <div class="carousel" aria-label="Quote Carousel">
+            <div class="tex-carousel">
+              <p>
+                “Psychedelics prove to you that there’s more than one way of seeing the world”
+              </p>
+              <h6>Jesse Lawler</h6>
+            </div>
+          </div>
+        </ng-template>
+      </app-slider>
     </div>
   </div>
 
- <div class="categories-container">
-  <h1 class="title-categories">Top Categories</h1>
-  <div class="categories-section">
-    <div class="categories-cards">
-       <app-slider [images]="categories$ | async" [swiperConfig]="swiperConfig">
-        <ng-template #customize let-img>
-          <app-categories-card class="categories-card" [src]="img" [name]="getItemName(img)"></app-categories-card>
-        </ng-template>
-       </app-slider>
+  <div class="categories-container">
+    <h1 class="title-categories">Top Categories</h1>
+    <div class="categories-section">
+      <div class="categories-cards">
+        <app-slider [images]="categories$ | async" [swiperConfig]="swiperConfig">
+          <ng-template #customize let-img>
+            <app-categories-card class="categories-card" [src]="img" [name]="getItemName(img)" aria-label="Category Card">
+            </app-categories-card>
+          </ng-template>
+        </app-slider>
+      </div>
     </div>
   </div>
- </div>
 </section>

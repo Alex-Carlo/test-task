@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ContentChild, Input, TemplateRef, ViewChild } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
+import { SwiperOptions } from 'swiper/types';
 register();
 
 @Component({
@@ -16,29 +17,14 @@ export class SliderComponent implements AfterViewInit {
         '/assets/images/products/shrom-edibles.png',
         '/assets/images/products/magic-mushrooms.png'
     ];
+    @Input() swiperConfig: SwiperOptions = {};
 
 
 
 
     ngAfterViewInit() {
         new Swiper(this.swiperContainer.nativeElement, {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            breakpoints: {
-                576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                767: {
-                    slidesPerView: 3,
-                    spaceBetween: 15,
-                },
-                1023: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-            },
+            ...this.swiperConfig,
             navigation: {
                 prevEl: '.prev-btn',
                 nextEl: '.next-btn'

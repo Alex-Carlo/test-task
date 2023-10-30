@@ -1,13 +1,13 @@
 <article class="container">
     <section class="highlights-container">
-        <h3>Some Awesome <br> Review Highlights</h3>
+        <h3>Some Awesome <br *ngIf="!(hasBreakLine$ | async)"> Review Highlights</h3>
         <div class="review-cards">
-            <img src="/assets/images/icons/icon-chevron-lh.svg" alt="">
-            <app-review-card></app-review-card>
-            <app-review-card></app-review-card>
-            <img src="/assets/images/icons/icon-chevron-rh.svg" alt="">
+            <app-slider [images]="reviews$ | async" [swiperConfig]="swiperConfig">
+                <ng-template #customize let-img>
+                    <app-review-card class="review-card" [avatar]="img" [content]="getItemContent(img)"></app-review-card>
+                </ng-template>
+               </app-slider>
         </div>
-
     </section>
 </article>
 

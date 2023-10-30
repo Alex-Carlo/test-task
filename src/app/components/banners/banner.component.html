@@ -31,7 +31,7 @@
   <h1 class="title-categories">Top Categories</h1>
   <div class="categories-section">
     <div class="categories-cards">
-       <app-slider [images]="categories$ | async">
+       <app-slider [images]="categories$ | async" [swiperConfig]="swiperConfig">
         <ng-template #customize let-img>
           <app-categories-card class="categories-card" [src]="img" [name]="getItemName(img)"></app-categories-card>
         </ng-template>

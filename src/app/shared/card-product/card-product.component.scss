@@ -1,18 +1,21 @@
+@import '../../../styles.scss';
 
-.product-card{
+.product-card {
+  width: 100%;
   max-width: 426px;
   margin-bottom: 91px;
   margin-right: 23px;
   display: flex;
   flex-direction: column;
   border-radius: 22px;
+  align-items: center;
   .footer {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 94px;
     flex-shrink: 0;
-    background-color: #EEEEEE;
+    background-color: $color-gray-light;
     justify-content: space-around;
     border-bottom-left-radius: 21px;
     border-bottom-right-radius: 21px;
@@ -83,7 +86,7 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  margin-left: 370px;
+  margin-left: 100%;
   margin-top: 35px;
   transition: opacity 1s ease-in-out;
   visibility: hidden;
@@ -121,5 +124,42 @@
       transition: opacity 1s ease-in-out;
       opacity: 1;
     }
+  }
+}
+
+
+
+@media screen and (max-width:1199px) {
+  .product-card {
+   .footer {
+    padding: 0 16px;
+    p:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+  }
+  }
+}
+
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+
+    
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+@media screen and (max-width:575px) {
+  .icons {
+    margin-left: 90%;
   }
 }

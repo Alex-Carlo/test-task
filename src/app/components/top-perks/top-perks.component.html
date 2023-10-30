@@ -2,7 +2,11 @@
     <h3>Top Perks for you</h3>
     <div class="perks-carousel-container">
         <div class="perks-carousel-container__cards">
-          <app-card-product *ngFor="let item of perks" [isPerk]="true" [perk]="item"></app-card-product>
+            <app-slider [images]="perks$ | async" [swiperConfig]="swiperConfig">
+            <ng-template #customize let-img>
+                <app-card-product class="review-card" [isPerk]="true" [perk]="getItem(img)"></app-card-product>
+            </ng-template>
+            </app-slider>
         </div>
     </div>
     <div class="top-perk">

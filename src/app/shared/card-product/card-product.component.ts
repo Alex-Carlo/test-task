@@ -12,6 +12,7 @@ interface Perk extends CardData {
 export class CardProductComponent implements OnInit {
   @Input() perk: Perk | undefined;
   @Input() isPerk = false;
+
   constructor() {
 
   }

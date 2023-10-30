@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CardProductComponent } from './card-product/card-product.component';
 import { FilterBarComponent } from './filter/filter-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +19,7 @@ import { SliderComponent } from './slider/slider.component';
     ],
     imports: [
         CommonModule,
+        RouterModule
     ],
     exports: [
         FooterComponent,

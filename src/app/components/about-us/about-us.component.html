@@ -1,11 +1,13 @@
 <section class="container">
+ <ng-container *ngIf="responsive$ | async as responsive">
    <div class="about-us-header">
-    <h3>Getting to <br> Knowing us</h3>
+    <h3>Getting to <br *ngIf="!responsive.hasBreakLine"> Knowing us</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
    </div>
    <div class="about-us-content">
         <div class="about-us-content__card">
-            <h3>Lorem ipsum dolor sit a <br> sectetur adipiscing elit sed <br> do eiusmod tempor</h3>
+            <h3>Lorem ipsum dolor sit a <br *ngIf="!responsive.hasBreakLine"> sectetur adipiscing elit sed <br *ngIf="!responsive.hasBreakLine"> do eiusmod tempor</h3>
+            <br *ngIf="responsive.hasBreakLine">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
             <button type="button" class="btn btn-dark">Lorem ipsum dolor sit amet, </button>
         </div>
@@ -13,5 +15,6 @@
             <img src="assets/images/layout/ellipse16.png" alt="">
         </div>     
    </div>
+ </ng-container>
 </section>
 

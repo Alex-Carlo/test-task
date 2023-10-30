@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Observable, map, of } from "rxjs";
+import { SwiperOptions } from "swiper/types";
 
 @Component({
   selector: "app-banner",
@@ -30,6 +31,25 @@ export class BannerComponent {
 
   getItemName(image: string): string | undefined {
     return this.categories.find(item => item.img === image)?.name;
+  }
+  swiperConfig: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
   }
 }
 

@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" [routerLink]="['']" routerLinkActive="router-link-active" >
       <img [src]="logoUrl" alt="Logo" width="212" height="75">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
+      <ul class="navbar-nav mx-auto text-center m-4">
         <li class="nav-item" *ngFor="let item of menuItems">
           <a class="nav-link" routerLink="products">{{item}}</a>
         </li>
@@ -19,12 +19,14 @@
           <img src="/assets/images/icons/icon-search.png">
         </span>
        </div>
+       <div class="d-flex w-100 justify-content-evenly">
         <button class="btn btn-dark sing-up-btn">
           <img src="/assets/images/icons/icon-person.svg" height="20"  width="20">
           <span>Sign Up</span>
         </button>
         <img src="/assets/images/icons/icon-like.svg" height="30"  width="30">
         <img src="/assets/images/icons/icon-cart.svg" height="30"  width="30">
+       </div>
       </div>
     </div>
   </div>

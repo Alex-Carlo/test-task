@@ -59,7 +59,7 @@
 
 
 @media (max-width:1199px) and (min-width:992px) {
-section {
+:host section {
     .about-us-content {
         &__card {
             h3 {
@@ -79,18 +79,113 @@ section {
 }
 
 @media (max-width:991px) and (min-width:768px) {
-
-    
+   :host section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6rem;
+        align-items: center;
+        .about-us-header {
+            gap: 3rem;
+        }
+        .about-us-content {
+            flex-direction: column-reverse;
+            &__card {
+                h3 {
+                    font-size: 3.2rem;
+                    line-height: 5.2rem;
+                }
+                h3, p {
+                    display: contents;
+                }
+            }
+            &__img {
+                img {
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+        }
+    }
 }
 
 
 @media (max-width:767px) and (min-width:576px) {
+    :host section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6rem;
+        align-items: center;
+        background-size: 100% 84%, cover;
+        .about-us-header {
+            flex-direction: column;
+            gap: 3rem;
+            p {
+                display: contents;
+            }
+        }
+        .about-us-content {
+            flex-direction: column-reverse;
+            &__card {
+                h3 {
+                    font-size: 3.2rem;
+                    line-height: 5.2rem;
+                }
+               h3, p {
+                    display: contents;
+                }
+            }
+            &__img {
+                img {
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+        }
+    }
     
 
 }
 
 
 @media screen and (max-width:575px) {
+    :host section {
+        display: flex;
+        flex-direction: column;
+        row-gap: 6rem;
+        align-items: center;
+        background-size: 100% 50%, cover;
+        background-position: center;
+        padding: 0.4rem;
+        .about-us-header {
+            flex-direction: column;
+            gap: 3rem;
+            p {
+                display: contents;
+            }
+        }
+        .about-us-content {
+            flex-direction: column-reverse;
+            &__card {
+                justify-content: center;
+                gap: 2rem;
+                height: 40.1rem;
+                h3 {
+                    font-size: 2rem;
+                    line-height: 3.2rem;
+                }
+                h3, p {
+                    display: contents;
+                }
+            }
+            &__img {
+                img {
+                    width: 90%;
+                    height: 90%;
+                    bottom: unset;
+                }
+            }
+        }
+    }
 
 
 }

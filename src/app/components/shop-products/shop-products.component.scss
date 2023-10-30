@@ -1,12 +1,15 @@
-section > app-card-product {
+:host section > app-card-product {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .shop-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(426px, 1fr));
-  gap: 1px;
+  gap: 2rem;
+  width: 100%;
 }
 
 .title-shop-products{
@@ -15,4 +18,28 @@ section > app-card-product {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+
+@media (max-width:1199px) and (min-width:992px) {
+
+    
+}
+
+@media (max-width:991px) and (min-width:768px) {
+:host section > .shop-products {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+    
+}
+
+@media (max-width:767px) and (min-width:576px) {
+    
+
+}
+
+@media screen and (max-width:575px) {
+  :host section > .shop-products {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
